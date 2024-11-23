@@ -31,7 +31,7 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/weather-app:${{ github.run_number }}
     
   updatemanifest:
-    needs: build
+    needs: publish_images
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
